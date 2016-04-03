@@ -3,7 +3,7 @@
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
-        map<int,int> mapint;
+        unordered_map<int,int> mapint;    //使用unordered_map更快
         for(int i = 0;i < nums.size();i++){
             int id = mapint[nums[i]];
             if(id == 0){
